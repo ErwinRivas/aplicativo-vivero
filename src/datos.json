@@ -1,0 +1,8 @@
+{
+    "todos":[{"categoria":"deportes","precio":"$10.30","stock":true,"nombre":"Football"},
+        {"categoria":"deportes","precio":"9.90","stock":true,"nombre":"Baseball"},
+        {"categoria":"deportes","precio":"7.80","stock":false,"nombre":"Basketball"},
+        {"categoria":"electrónica","precio":"800.00","stock":true,"nombre":"iPod Touch"},
+        {"categoria":"electrónica","precio":"323.00","stock":false,"nombre":"iPhone 5"},
+        {"categoria":"electrónica","precio":"200.34","stock":true,"nombre":"Nexus 7"}]
+}

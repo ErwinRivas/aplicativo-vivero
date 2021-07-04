@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
+import {todos} from './datos.json'
+import SearchBar from "./components/SearchBar";
+import ProductTable from "./components/ProductTable";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+  //funciones
+  // y declarar estados
+  state={
+    filterText :'',
+    inStockOnly: false
+  }
+
+  handleFilterTextChange = (filterText) => {
+    this.setState({
+      filterText: filterText
+    })
+  }
+
+  handleInStockChange = (inStockOnly) => {
+    this.setState({
+      inStockOnly: inStockOnly
+    })
+  }
+
+
+
+
+  render(){
+    //declarar constantes 
+    const {filterText, inStockOnly} =this.state
+
+    return(
+      <div className="container">
+        <div className="row mt-4">
+          <div className="col-md-12 mt-4">
+          <SearchBar filterTextData ={filterText} inStockOnlyData={inStockOnly}
+          onFilterTextChange={this.handleFilterTextChange}
+          onInStockChange={this.handleInStockChange}
+           /> 
+           <ProductTable 
+           todos={todos} 
+           filterTextData ={filterText} inStockOnlyData={inStockOnly}
+           />
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
+
 
 export default App;
