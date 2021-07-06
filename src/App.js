@@ -6,7 +6,7 @@ import ProductTable from "./components/ProductTable";
 
 class App extends Component{
   //funciones
-  // y declarar estados ojo
+  // y declarar estados 
   state={
     filterText :'',
     inStockOnly: false
