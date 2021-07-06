@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/aplicativo-vivero/static/css/main.7556d2fb.chunk.css",
+    "main.js": "/aplicativo-vivero/static/js/main.e7a33a92.chunk.js",
+    "main.js.map": "/aplicativo-vivero/static/js/main.e7a33a92.chunk.js.map",
+    "runtime-main.js": "/aplicativo-vivero/static/js/runtime-main.1999574f.js",
+    "runtime-main.js.map": "/aplicativo-vivero/static/js/runtime-main.1999574f.js.map",
+    "static/css/2.7b1c032f.chunk.css": "/aplicativo-vivero/static/css/2.7b1c032f.chunk.css",
+    "static/js/2.f10b76fc.chunk.js": "/aplicativo-vivero/static/js/2.f10b76fc.chunk.js",
+    "static/js/2.f10b76fc.chunk.js.map": "/aplicativo-vivero/static/js/2.f10b76fc.chunk.js.map",
+    "index.html": "/aplicativo-vivero/index.html",
+    "static/css/2.7b1c032f.chunk.css.map": "/aplicativo-vivero/static/css/2.7b1c032f.chunk.css.map",
+    "static/css/main.7556d2fb.chunk.css.map": "/aplicativo-vivero/static/css/main.7556d2fb.chunk.css.map",
+    "static/js/2.f10b76fc.chunk.js.LICENSE.txt": "/aplicativo-vivero/static/js/2.f10b76fc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1999574f.js",
+    "static/css/2.7b1c032f.chunk.css",
+    "static/js/2.f10b76fc.chunk.js",
+    "static/css/main.7556d2fb.chunk.css",
+    "static/js/main.e7a33a92.chunk.js"
+  ]
+}
