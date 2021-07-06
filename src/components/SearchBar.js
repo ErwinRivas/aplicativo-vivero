@@ -21,7 +21,7 @@ class SearchBar extends Component {
                         onChange={this.handleTextChange} />
                 </div>
                 <div>
-                    <p>
+                    
                         <div className="form-check">
                             <input type="checkbox"
                                 onChange={this.handleInStockChange}
@@ -29,7 +29,7 @@ class SearchBar extends Component {
                             {' '}
                             Solo mostrar porductos en Stock
                         </div>
-                    </p>
+                    
                 </div>
 
             </form>

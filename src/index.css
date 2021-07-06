@@ -12,5 +12,12 @@ code {
     monospace;
 }
 .thCategoria{
-text-align: right;
+text-align: center;
+}
+
+.spanNuevo{
+  margin-right: 100px !important;
+}
+.divNuevo{
+  width:150px;
 }

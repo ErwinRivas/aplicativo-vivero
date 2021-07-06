@@ -17,27 +17,43 @@ const TableBody = (props) => {
     const { filterTextData, inStockOnlyData, todos } = props;
     let lastCategory = null;
     const nuevo = todos.filter((todo, i) => { return (todo.nombre.indexOf(filterTextData) !== -1) })
-    const rows = nuevo.map((row, index) => {
-        if (inStockOnlyData && !row.stock) {
+    // const rows = nuevo.map((row, index) => {
+    //     if (inStockOnlyData && !row.stock) {
+    //         return;
+    //     } else {
+    //         if (row.categoria !== lastCategory) {
+    //             lastCategory =row.categoria;
+    //             return (
+    //                 <div className="divNuevo">
+    //                     <ProductCategoryRow product={row} key={row.index} />
+    //                     <ProductRow product={row} key={row.nombre} />
+    //                 </div>
+    //             )    
+    //         } else {
+    //             return (
+    //                     <ProductRow product={row} key={row.index} />
+    //             )
+    //         }
+    //     }    
+    // })
+    const filas = [];
+    nuevo.forEach(element => {
+        if (inStockOnlyData && !element.stock) {
             return;
-        } else {
-            if (row.categoria !== lastCategory) {
-                lastCategory =row.categoria;
-                return (
-                    <div>
-                        <ProductCategoryRow product={row} key={row.index} />
-                        <ProductRow product={row} key={row.nombre} />
-                    </div>
-                )    
-            } else {
-                return (
-                        <ProductRow product={row} key={row.index} />
-                )
-            }
-        }    
-    })
+        }
+        if (element.categoria !== lastCategory ) {
+            filas.push(
+                <ProductCategoryRow product={element} key={element.categoria} />
+            )
+        }
+        filas.push(
+            <ProductRow product={element} key={element.nombre} />
+        )
+        lastCategory = element.categoria;
+
+    });
     return (
-        <tbody>{rows}</tbody>
+        <tbody>{filas}</tbody>
     )
 }
 

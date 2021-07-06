@@ -3,7 +3,7 @@ import React from 'react'
 const ProductRow = (props) => {
 const  {product} = props
 const nombre = product.stock ?
-product.nombre  : <span style={{color: 'red'}}>{product.nombre}</span>
+<span className="spanNuevo">{product.nombre}</span>  : <span style={{color: 'red'}} className="spanNuevo" >{product.nombre}</span>
     return (
         <tr>
             <td>{nombre} </td>
