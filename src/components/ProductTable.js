@@ -16,7 +16,7 @@ const TableHeader = () => {
 const TableBody = (props) => {
     const { filterTextData, inStockOnlyData, todos } = props;
     let lastCategory = null;
-    const nuevo = todos.filter((todo, i) => { return (todo.nombre.indexOf(filterTextData) !== -1) })
+    //const nuevo = todos.filter((todo, i) => { return (todo.nombre.indexOf(filterTextData) !== -1) })
     // const rows = nuevo.map((row, index) => {
     //     if (inStockOnlyData && !row.stock) {
     //         return;
@@ -37,7 +37,10 @@ const TableBody = (props) => {
     //     }    
     // })
     const filas = [];
-    nuevo.forEach(element => {
+    todos.forEach(element => {
+        if (element.nombre.indexOf(filterTextData) === -1) {
+            return;
+        }
         if (inStockOnlyData && !element.stock) {
             return;
         }
